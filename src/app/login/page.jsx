@@ -28,26 +28,22 @@ const page = () => {
     }
 
   return (
-    <div
-    style={{
-        backgroundImage:'url("library2.jpg")',
-        backgroundPosition:'center',
-    }}
-    className='h-screen w-screen flex items-center justify-center flex-col object-cover'
-    >
-      <div
-      className='bg-green-600/60 h-screen w-screen fixed'
-      />
-      <div className='bg-white text-black font-semibold p-4 relative flex flex-col items-center'>
+
+      
+      <div className='bg-white text-black font-semibold p-4 relative flex flex-col justify-center space-y-4 items-center h-screen'>
+        <div className='bg-transparent  border-2 border-black px-4 py-4 flex flex-col items-center shadow-black shadow-md
+        '>
         <div>
             <img 
             className='w-[120px]'
             src="/jkuatLogo.png" alt="" />
             <h2>Exams Center</h2>
         </div>
+
+    
         <form 
         onSubmit={handleSubmit}
-        className='w-[400px] grid gap-3'>
+        className='w-[400px] grid gap-6'>
             {inputs.map((d,i) => (
                 <div key={i}
                 className='grid gap-2'
@@ -64,10 +60,14 @@ const page = () => {
                     />
                 </div>
             ))}
-            <button type='submit' className='bg-green-600 text-white py-1 w-[60%]'>Log In</button>
+            <button type='submit' className='bg-lime-300 text-white py-1 w-[60%]  active:bg-slate-50/25'>Login</button>
+           <p className='text-blue-500 hover:bg-black cursor-pointer
+           '> Forgot Password ?</p>
         </form>
       </div>
-    </div>
+      </div>
+      
+    
   )
 }
 
